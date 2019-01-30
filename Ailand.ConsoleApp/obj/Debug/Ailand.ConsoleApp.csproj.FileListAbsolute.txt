@@ -1,0 +1,7 @@
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\bin\Debug\Ailand.ConsoleApp.exe.config
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\bin\Debug\Ailand.ConsoleApp.exe
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\bin\Debug\Ailand.ConsoleApp.pdb
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\obj\Debug\Ailand.ConsoleApp.csproj.CoreCompileInputs.cache
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\obj\Debug\Ailand.ConsoleApp.exe
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\obj\Debug\Ailand.ConsoleApp.pdb
+E:\公司项目\Win服务项目\Ailand.WinService\Ailand.ConsoleApp\obj\Debug\Ailand.ConsoleApp.csprojAssemblyReference.cache

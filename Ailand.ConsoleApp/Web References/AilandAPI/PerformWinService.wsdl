@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="StartServiceEvent">
+        <s:complexType />
+      </s:element>
+      <s:element name="StartServiceEventResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StartServiceEventResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TryServiceEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="resultArr" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="TryServiceEventResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EndServiceEvent">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EndServiceEventResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StartServiceEventSoapIn">
+    <wsdl:part name="parameters" element="tns:StartServiceEvent" />
+  </wsdl:message>
+  <wsdl:message name="StartServiceEventSoapOut">
+    <wsdl:part name="parameters" element="tns:StartServiceEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="TryServiceEventSoapIn">
+    <wsdl:part name="parameters" element="tns:TryServiceEvent" />
+  </wsdl:message>
+  <wsdl:message name="TryServiceEventSoapOut">
+    <wsdl:part name="parameters" element="tns:TryServiceEventResponse" />
+  </wsdl:message>
+  <wsdl:message name="EndServiceEventSoapIn">
+    <wsdl:part name="parameters" element="tns:EndServiceEvent" />
+  </wsdl:message>
+  <wsdl:message name="EndServiceEventSoapOut">
+    <wsdl:part name="parameters" element="tns:EndServiceEventResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PerformWinServiceSoap">
+    <wsdl:operation name="StartServiceEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">服务开始执行</wsdl:documentation>
+      <wsdl:input message="tns:StartServiceEventSoapIn" />
+      <wsdl:output message="tns:StartServiceEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TryServiceEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">服务异常执行</wsdl:documentation>
+      <wsdl:input message="tns:TryServiceEventSoapIn" />
+      <wsdl:output message="tns:TryServiceEventSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EndServiceEvent">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">服务终止执行</wsdl:documentation>
+      <wsdl:input message="tns:EndServiceEventSoapIn" />
+      <wsdl:output message="tns:EndServiceEventSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PerformWinServiceSoap" type="tns:PerformWinServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartServiceEvent">
+      <soap:operation soapAction="http://tempuri.org/StartServiceEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryServiceEvent">
+      <soap:operation soapAction="http://tempuri.org/TryServiceEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndServiceEvent">
+      <soap:operation soapAction="http://tempuri.org/EndServiceEvent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PerformWinServiceSoap12" type="tns:PerformWinServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StartServiceEvent">
+      <soap12:operation soapAction="http://tempuri.org/StartServiceEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TryServiceEvent">
+      <soap12:operation soapAction="http://tempuri.org/TryServiceEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndServiceEvent">
+      <soap12:operation soapAction="http://tempuri.org/EndServiceEvent" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PerformWinService">
+    <wsdl:port name="PerformWinServiceSoap" binding="tns:PerformWinServiceSoap">
+      <soap:address location="http://api.ailand.mobi:1188/manager/PerformWinService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PerformWinServiceSoap12" binding="tns:PerformWinServiceSoap12">
+      <soap12:address location="http://api.ailand.mobi:1188/manager/PerformWinService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

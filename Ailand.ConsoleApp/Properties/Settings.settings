@@ -1,9 +1,5 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Ailand.ConsoleApp.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)">
   <Profiles />
-  <Settings>
-    <Setting Name="Ailand_ConsoleApp_AilandAPI_PerformWinService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://api.ailand.mobi:1188/manager/PerformWinService.asmx</Value>
-    </Setting>
-  </Settings>
+  <Settings />
 </SettingsFile>

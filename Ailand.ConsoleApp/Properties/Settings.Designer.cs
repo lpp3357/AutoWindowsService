@@ -22,15 +22,5 @@ namespace Ailand.ConsoleApp.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://api.ailand.mobi:1188/manager/PerformWinService.asmx")]
-        public string Ailand_ConsoleApp_AilandAPI_PerformWinService {
-            get {
-                return ((string)(this["Ailand_ConsoleApp_AilandAPI_PerformWinService"]));
-            }
-        }
     }
 }

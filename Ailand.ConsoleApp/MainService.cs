@@ -1,4 +1,4 @@
-﻿using Ailand.ConsoleApp.AilandAPI;
+﻿
 using System;
 using System.CodeDom.Compiler;
 using System.ServiceProcess;
@@ -9,7 +9,6 @@ namespace Ailand.ConsoleApp
 {
     partial class MainService : ServiceBase
     {
-        private PerformWinService winService = new PerformWinService();
 
         public MainService()
         {
@@ -114,7 +113,7 @@ namespace Ailand.ConsoleApp
         {
             // TODO: 在此处添加代码以执行停止服务所需的关闭操作。
             //System.IO.File.AppendAllText("D:\\log.txt", "服务已停止……" + DateTime.Now.ToString());
-            winService.EndServiceEvent(string.Empty);
+            //winService.EndServiceEvent(string.Empty);
         }
     }
 }
